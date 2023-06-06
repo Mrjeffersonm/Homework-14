@@ -1,0 +1,52 @@
+body {
+    background-color:rgb(98, 159, 240);
+}
+
+.menuBar {
+    width: 99%;
+    background-color:sandybrown;
+    height: 20px;
+    padding: 5px;
+}
+
+.menuItem {
+    float: right;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.form {
+    clear: both;
+    display: block;
+    margin: 20px;
+    width: 99%;
+    text-align: center;
+}
+
+#createAccount {
+    
+}
+
+#loginButton {
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.item {
+    
+}
+
+.item > div {
+    display: inline-block;
+    font-size: x-large;
+    margin: 5px;
+}
+
+.title {
+    font-size: xx-large;
+    width: 99%;
+    text-align: center;
+}
