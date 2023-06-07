@@ -2,7 +2,8 @@
 
 // import models
 const User = require('./User');
-const Item = require('./Item.js')
+const Item = require('./Item')
+const BlogPost = require('./blog-post')
 
 // // Products belongsTo Category
 // Product.belongsTo(Category, {
@@ -24,13 +25,13 @@ const Item = require('./Item.js')
 //   foreignKey: 'tag_id',
 // });
 
-User.hasMany(Item);
+User.hasMany(BlogPost);
 
-Item.belongsTo(User, {
+BlogPost.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
 module.exports = {
   User,
-  Item,
+  BlogPost,
 };

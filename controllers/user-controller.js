@@ -3,7 +3,7 @@ const { User } = require('../models');
 
 exports.getUser = asyncHandler(async (req, res) => {
     const users = await User.findAll({
-        attributes: ['user_name','id', 'island_code'],
+        attributes: ['user_name','id'],
     });
     res.send(
         JSON.stringify(users, null, 2)
@@ -13,7 +13,7 @@ exports.getUser = asyncHandler(async (req, res) => {
 exports.getUserId = asyncHandler(async (req, res) =>{
     const user_id = req.params.id
     const user = await User.findAll({
-        attributes: ['user_name','id', 'island_code'],
+        attributes: ['user_name','id'],
         where: {
         id: user_id
         },

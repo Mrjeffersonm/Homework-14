@@ -1,0 +1,27 @@
+<div class="dashboard">
+    {{#each posts as |post|}}
+    <div class="post-dashboard">
+        <div class="post-title">
+            {{post.title}}
+        </div>
+        <div class="post-author">
+            {{post.user.user_name}}
+        </div>
+        <div class="post-body">
+            {{post.body}}
+        </div>
+        {{#if post.editable}}
+        <div class="post-toolbar">
+            <div class="edit-post-button">
+                <a href="/forms/update-post/{{post.id}}">Edit Post</a>
+            </div>
+            <form action="/api/posts/delete/{{post.id}}" method="post" class="form-example">
+                <div class="delete-post">
+                    <input type="submit" value="Delete Post">
+                </div>
+            </form>
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
+</div>

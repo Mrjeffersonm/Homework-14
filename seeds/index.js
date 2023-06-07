@@ -4,7 +4,7 @@ const seedUsers = require('./user-seeds');
 // const seedProductTags = require('./product-tag-seeds');
 
 const sequelize = require('../config/connection');
-const seedItems = require('./item-seeds');
+const seedBlog = require('./blog-seeds');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -13,8 +13,8 @@ const seedAll = async () => {
   await seedUsers();
   console.log('\n----- USERS SEEDED -----\n');
 
-  // await seedItems();
-  // console.log('\n----- ITEMS SEEDED -----\n');
+  await seedBlog();
+  console.log('\n----- BLOGS SEEDED -----\n');
 
   // await seedProducts();
   // console.log('\n----- PRODUCTS SEEDED -----\n');

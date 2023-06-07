@@ -6,7 +6,7 @@ exports.login = asyncHandler(async (req, res) => {
   const user_name = req.body.user_name
   const user_password = req.body.password
   const user = await User.findOne({
-    attributes: ['user_name','id','island_code'],
+    attributes: ['user_name','id'],
     where: {
       user_name: user_name,
       password: user_password,

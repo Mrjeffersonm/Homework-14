@@ -1,0 +1,15 @@
+{{#each posts as |post|}}
+<form action="/api/posts/{{post.id}}" method="post" class="form-example">
+    <div class="form-example">
+        <label for="title">Enter post title: </label>
+        <input type="text" name="title" value="{{post.title}}" id="title" required>
+    </div>
+    <div className="input-field">
+        <label for="body">Enter post body</label>
+        <textarea rows="10" cols="50" id="body"  name="body" required>{{post.body}}</textarea>
+    </div>
+    <div class="form-example">
+        <input type="submit" value="Update">
+    </div>
+</form>
+{{/each}}
