@@ -6,7 +6,8 @@ router.use('/api', apiRoutes);
 router.use('/forms', formRoutes)
 
 router.use((req, res) => {
-  res.send("<h1>Wrong Route!</h1>")
+  res.redirect('/api/posts')
 });
+
 
 module.exports = router;

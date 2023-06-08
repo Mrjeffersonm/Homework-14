@@ -25,6 +25,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(routes);
 
+app.get('*', (req, res) =>
+  res.redirect('/api/posts')
+);
 
 // sync sequelize models to the database, then turn on the server
 const sync = async () => {
