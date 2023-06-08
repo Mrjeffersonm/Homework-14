@@ -1,11 +1,9 @@
 <form action="/api/posts" method="post" class="form-example">
     <div class="form-example">
-        <label for="title">Enter post title: </label>
-        <input type="text" name="title" id="title" required>
+        <input type="text" name="title" id="title" required placeholder="Enter Title">
     </div>
     <div className="input-field">
-        <label for="body">Enter post body</label>
-        <textarea rows="10" cols="50" id="body" name="body" required></textarea>
+        <textarea rows="10" cols="50" id="body" name="body" required placeholder="Enter Post"></textarea>
     </div>
     <div class="form-example">
         <input type="submit" value="Post">

@@ -4,17 +4,18 @@
     {{/if}}
     {{#each posts as |post|}}
     <div class="post-dashboard">
-        
-        <div class="post-title">
-            <a href="/api/posts/{{post.id}}">
-                {{post.title}}
-            </a>
-        </div>
-        <div class="post-author">
-            {{post.user.user_name}}
-        </div>
-        <div class="post-date">
-            {{post.date}}
+        <div class="post-info">
+            <div class="post-title">
+                <a href="/api/posts/{{post.id}}">
+                    {{post.title}}
+                </a>
+            </div>
+            <div class="post-author">
+                {{post.user.user_name}}
+            </div>
+            <div class="post-date">
+                {{post.date}}
+            </div>
         </div>
         <div class="post-body">
             {{post.body}}

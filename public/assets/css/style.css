@@ -1,52 +1,72 @@
 body {
-    background-color:rgb(98, 159, 240);
-}
-
-.menuBar {
-    width: 99%;
-    background-color:sandybrown;
-    height: 20px;
-    padding: 5px;
-}
-
-.menuItem {
-    float: right;
-    font-size: larger;
-    cursor: pointer;
-}
-
-.form {
-    clear: both;
-    display: block;
-    margin: 20px;
-    width: 99%;
+    background-color:rgb(198, 212, 231);
     text-align: center;
 }
 
-#createAccount {
-    
+textarea {
+    resize: none;
+    margin-bottom: 5px;
 }
 
-#loginButton {
-    
-}
-
-.hidden {
-    display: none;
-}
-
-.item {
-    
-}
-
-.item > div {
-    display: inline-block;
+.navbar {
     font-size: x-large;
-    margin: 5px;
+    margin-bottom: 10px;
 }
 
-.title {
-    font-size: xx-large;
-    width: 99%;
-    text-align: center;
+.navbar a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.post-dashboard {
+    margin: 20px;
+    font-size: large;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    width: 50%;
+    display: inline-block;
+}
+
+.post-info {
+    width: 100%;
+    background-color: cornflowerblue;
+    font-size: larger;
+}
+
+.post-info div {
+    display: inline-block;
+    margin: 10px;
+}
+
+.post-body {
+    text-align: left;
+    min-height: 40px;
+    margin: 10px;
+}
+
+.comment {
+    margin: 10px;
+    font-size: large;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: block;
+}
+
+.comment-body {
+    text-align: left;
+    min-height: 24px;
+    margin: 6px;
+}
+
+.comment-list {
+    display: inline-block;
+    width: 40%;
+}
+
+input {
+    background-color: whitesmoke;
+    margin-bottom: 5px;
 }
