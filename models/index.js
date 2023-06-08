@@ -2,28 +2,8 @@
 
 // import models
 const User = require('./User');
-const Item = require('./Item')
-const BlogPost = require('./blog-post')
-
-// // Products belongsTo Category
-// Product.belongsTo(Category, {
-//   foreignKey: 'category_id',
-// }); 
-// // Categories have many Products
-// Category.hasMany(Product);
-// // Products belongToMany Tags (through ProductTag)
-// Product.belongsToMany(Tag, {
-//   through: ProductTag,
-//   // as: 'product_tags',
-//   foreignKey: 'product_id',
-// });
-
-// // Tags belongToMany Products (through ProductTag)
-// Tag.belongsToMany(Product, {
-//   through: ProductTag,
-//   // as: 'product_tags',
-//   foreignKey: 'tag_id',
-// });
+const BlogPost = require('./blog-post');
+const Comment = require('./Comment');
 
 User.hasMany(BlogPost);
 
@@ -31,7 +11,21 @@ BlogPost.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
+BlogPost.hasMany(Comment);
+
+Comment.belongsTo(BlogPost, {
+  foreignKey: 'blogpost_id',
+});
+
+User.hasMany(Comment);
+
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+
 module.exports = {
   User,
   BlogPost,
+  Comment,
 };

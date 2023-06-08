@@ -14,10 +14,10 @@ exports.login = asyncHandler(async (req, res) => {
   })
   req.session.user = user;
   req.session.authenticated = true;
-  res.send(JSON.stringify(user))
+  res.redirect('/api/posts');
 });
 
 exports.logout = asyncHandler(async (req, res) => {
     req.session.destroy();
-    res.send(JSON.stringify({}))
+    res.redirect('/api/posts');
 })

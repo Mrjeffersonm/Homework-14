@@ -12,6 +12,7 @@ router.get('/:id', async (req, res) => {
     });
 
     return res.render('update-post-form', {
+        user: req.session.user,
         posts: mapResult(posts)
     });
 });

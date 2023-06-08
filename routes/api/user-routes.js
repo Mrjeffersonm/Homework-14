@@ -14,8 +14,10 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   console.log(req.body)
   try {
-    const createUser = await User.create(req.body)
-    res.redirect('/forms/login');
+    const createdUser = await User.create(req.body)
+    req.session.user = createdUser;
+    req.session.authenticated = true;
+    res.redirect('/api/posts');
   }
   catch(err) {
       res.send(

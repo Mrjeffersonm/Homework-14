@@ -1,0 +1,41 @@
+<div class="comment-form">
+    {{#each posts as |post|}}
+    <div class="post-dashboard">
+        <div class="post-title">
+            {{post.title}}
+        </div>
+        <div class="post-author">
+            {{post.user.user_name}}
+        </div>
+        <div class="post-date">
+            {{post.date}}
+        </div>
+        <div class="post-body">
+            {{post.body}}
+        </div>
+    </div>
+    {{/each}}
+    <form action="/api/posts/comment/{{post.id}}" method="post" class="form-example">
+        <div className="input-field">
+            <label for="body">Enter Comment</label>
+            <textarea rows="10" cols="50" id="body" name="body" required></textarea>
+        </div>
+        <div class="form-example">
+            <input type="submit" value="Post">
+        </div>
+    </form>
+    {{#each comments as |comment|}}
+    <div class="comment">
+        <div class="comment-author">
+            {{comment.user.user_name}}
+        </div>
+        <div class="comment-date">
+            {{comment.date}}
+        </div>
+        <div class="comment-body">
+            {{comment.body}}
+        </div>
+    </div>
+    {{/each}}
+
+</div>
